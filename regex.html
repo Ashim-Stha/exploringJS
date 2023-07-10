@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .format {
+        display: none;
+      }
+
+      .show {
+        display: block;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <form id="phoneForm">
+      <label for="phone"></label>
+      <input
+        class="phone"
+        type="tel"
+        name="phone"
+        id="phone"
+        placeholder="Enter your phone"
+        autocomplete="off"
+      />
+
+      <p class="format">Examples: 555-555-5555</p>
+    </form>
+  </body>
+  <script src="regex.js"></script>
+</html>
