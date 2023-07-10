@@ -18,7 +18,7 @@ document.getElementById("phone").addEventListener("input", (e) => {
 document.getElementById("phoneForm").addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const regex = /[()-. ]/g;
+  const regex = /[()-. ]/g; //detects !num
 
   const phone = document.getElementById("phone");
 
@@ -29,11 +29,11 @@ document.getElementById("phoneForm").addEventListener("submit", (e) => {
 document.getElementById("textForm").addEventListener("submit", (e) => {
   e.preventDefault();
 
-  const regex = / {2,}/g;
+  const regex = / {2,}/g; ///detects white spaces
 
   const text = document.getElementById("text");
 
-  const val = text.value.replaceAll(regex, " ").trim();
+  const val = text.value.replaceAll(regex, " ").trim(); //eliminates whitespaces
   console.log(val);
 
   const encodedInputText = encodeURI(text.value);
