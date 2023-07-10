@@ -25,3 +25,20 @@ document.getElementById("phoneForm").addEventListener("submit", (e) => {
   const val = phone.value.replaceAll(regex, "");
   console.log(val);
 });
+
+document.getElementById("textForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const regex = / {2,}/g;
+
+  const text = document.getElementById("text");
+
+  const val = text.value.replaceAll(regex, " ").trim();
+  console.log(val);
+
+  const encodedInputText = encodeURI(text.value);
+  const encodedCleanText = encodeURI(val);
+
+  console.log(encodedInputText);
+  console.log(encodedCleanText);
+});
